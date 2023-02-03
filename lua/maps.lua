@@ -1,7 +1,16 @@
 local set = vim.keymap.set
 
--- no yank x
-set('n', 'x', '"_x')
+vim.g.mapleader = '<Space>'
+
+-- Phil - Utility
+set('n', '<C-s>', ':Ex<CR>')
+
+
+-- yank stuff
+set('n', 'x', '\"_x')
+set('n', '<leader>p', '\"+p')
+set('n', '<leader>P', '\"+P')
+set('n', '<leader>', '\"_y')
 
 -- increment/decrement
 set('n', '+', '<C-a>')

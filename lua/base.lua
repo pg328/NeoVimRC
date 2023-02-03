@@ -1,3 +1,5 @@
+vim.cmd "colorscheme darkplus"
+
 vim.cmd('autocmd!')
 
 vim.scriptencoding = 'utf-8'
@@ -27,7 +29,7 @@ o.shiftwidth = 2
 o.tabstop = 2
 o.ai = true -- autoindent
 o.si = true -- smartindent
-o.wrap = false -- no wrap lines
+o.wrap = true -- no wrap lines
 o.backspace = 'start,eol,indent'
 o.path:append { '**' } -- recursive file search
 o.wildignore:append { '*/node_modules/*' } -- recursive file search
