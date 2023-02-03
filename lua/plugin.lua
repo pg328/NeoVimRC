@@ -20,7 +20,7 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp' -- source for cmp to use nvim's LSP
   use 'hrsh7th/nvim-cmp' -- autocompletions
- -- use 'hrsh7th/nvim-lspconfig' -- LSP
+  use 'L3MON4D3/LuaSnip' -- Snippet
 
 
   -- Your plugins go here
