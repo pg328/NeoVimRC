@@ -7,9 +7,7 @@ local set = vim.keymap.set
 
 set('n', '[d', '<Cmd>Lspsaga diagnostic_jump_next<CR>')
 set('n', ']d', '<Cmd>Lspsaga diagnostic_jump_prev<CR>')
-set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>')
-set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>')
-set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>')
+set('n', 'gd', '<Cmd>Lspsaga peek_definition<CR>')
 set({ 'n', 'v' }, '<leader>.', '<Cmd>Lspsaga code_action<CR>')
 
 -- Diagnostic jump with filters such as only jumping to an error
