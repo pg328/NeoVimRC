@@ -11,8 +11,11 @@ packer.startup(function(use)
   use 'lunarvim/colorschemes' -- VSCode Theme
   use 'kyazdani42/nvim-web-devicons' -- Nice Icons
   use 'nvim-lualine/lualine.nvim' -- LuaLine!
-  use 'neovim/nvim-lspconfig' -- LSP starter config
-  use { "williamboman/mason.nvim" }
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
   use { 'onsails/lspkind.nvim' } -- vscode-like picograms apparently
   use 'hrsh7th/cmp-buffer' --
   use 'hrsh7th/cmp-nvim-lsp' -- source for cmp to use nvim's LSP
