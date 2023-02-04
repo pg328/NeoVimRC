@@ -14,11 +14,13 @@ set('n', '<C-a>', 'gg<S-v>G')
 
 -- New Tab
 set('n', 'te', ':tabedit<CR>')
+set('n', 'tc', ':tabclose<CR>')
+set('n', 'tn', ':tabnext<CR>')
+set('n', 'tp', ':tabprevious<CR>')
 
 -- Splits
 set('n', 'ss', ':vsplit<CR><C-w>w', { silent = true })
 set('n', 'sv', ':split<CR><C-w>w', { silent = true })
-set('n', 'te', ':tabedit<CR>', { silent = true })
 
 -- Move Split
 set('n', '<leader><leader>', '<C-w>w')
