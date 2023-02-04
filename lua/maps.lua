@@ -1,10 +1,5 @@
 local set = vim.keymap.set
 
-
--- Phil - Utility
-set('n', '<C-s>', ':Ex<CR>')
-
-
 -- yank stuff
 set('n', 'x', '\"_x')
 set('n', '<leader>p', '\"+p')
