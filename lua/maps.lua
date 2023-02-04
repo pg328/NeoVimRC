@@ -1,6 +1,5 @@
 local set = vim.keymap.set
 
-vim.g.mapleader = '<Space>'
 
 -- Phil - Utility
 set('n', '<C-s>', ':Ex<CR>')
@@ -10,7 +9,6 @@ set('n', '<C-s>', ':Ex<CR>')
 set('n', 'x', '\"_x')
 set('n', '<leader>p', '\"+p')
 set('n', '<leader>P', '\"+P')
-set('n', '<leader>', '\"_y')
 
 -- increment/decrement
 set('n', '+', '<C-a>')
