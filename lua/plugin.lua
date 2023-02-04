@@ -55,7 +55,8 @@ packer.startup(function(use)
   }
 
   -- null-ls
-  -- Prettier
+use('jose-elias-alvarez/null-ls.nvim')
+use('MunifTanjim/prettier.nvim')-- Prettier
   -- vim-surround
   -- undotree
   -- Your plugins go here

@@ -3,7 +3,6 @@ if (not status) then return end
 
 mason.setup {
   ensure_installed = {
-    'sumneko_lua',
-    'zk',
+    'tailwindcss',
   }
 }
