@@ -23,8 +23,8 @@ set('n', '<C-a>', 'gg<S-v>G')
 set('n', 'te', ':tabedit<CR>')
 
 -- Splits
-set('n', 'ss', ':split<CR><C-w>w', { silent = true })
-set('n', 'sv', ':vsplit<CR><C-w>w', { silent = true })
+set('n', 'ss', ':vsplit<CR><C-w>w', { silent = true })
+set('n', 'sv', ':split<CR><C-w>w', { silent = true })
 set('n', 'te', ':tabedit<CR>', { silent = true })
 
 -- Move Split
