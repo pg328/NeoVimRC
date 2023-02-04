@@ -20,7 +20,6 @@ tscope.setup {
   extensions = {
     file_browser = {
       theme = 'dropdown',
-      --
       hijack_netrw = true,
       mappings = {
         ['i'] = {
