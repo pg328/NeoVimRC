@@ -12,6 +12,8 @@ ts.setup {
     disable = {},
   },
   ensure_installed = {
+    "lua",
+    "vim",
     "markdown",
     "tsx",
     "toml",
