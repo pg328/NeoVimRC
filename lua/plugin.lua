@@ -21,6 +21,8 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp' -- source for cmp to use nvim's LSP
   use 'hrsh7th/nvim-cmp' -- autocompletions
   use 'L3MON4D3/LuaSnip' -- snippets
+  use 'mg979/vim-visual-multi' -- MultiCursor
+  use "kylechui/nvim-surround"
   use {
     'nvim-treesitter/nvim-treesitter', -- TreeSitter
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
@@ -33,7 +35,10 @@ packer.startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     -- or                            , branch = '0.1.x',
-    requires = { { 'nvim-lua/plenary.nvim' } }
+    requires = { { 'nvim-lua/plenary.nvim' } , { "kdheepak/lazygit.nvim" } },
+    config = function()
+        require("telescope").load_extension("lazygit") --LazyGit
+    end,
   }
   use 'nvim-telescope/telescope-file-browser.nvim' -- NetRW replacement
   use 'akinsho/bufferline.nvim' -- Bufferline

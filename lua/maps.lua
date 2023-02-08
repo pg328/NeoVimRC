@@ -12,6 +12,10 @@ set('n', '-', '<C-x>')
 -- Select All
 set('n', '<C-a>', 'gg<S-v>G')
 
+-- Movement
+set('n', 'gl', '$')
+set('n', 'gh', '0')
+
 -- New Tab
 set('n', 'te', ':tabedit<CR>')
 set('n', 'tc', ':tabclose<CR>')
