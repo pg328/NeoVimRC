@@ -66,10 +66,29 @@ packer.startup(function(use)
     }
   }
 
-  -- null-ls
-  use('jose-elias-alvarez/null-ls.nvim')
+  use('jose-elias-alvarez/null-ls.nvim') -- Null-LS
   use('MunifTanjim/prettier.nvim')-- Prettier
-  -- vim-surround
-  -- undotree
+  use('theprimeagen/harpoon') -- Harpoon
+  use('mbbill/undotree') -- UndoTree
+  use({ -- Markdown Preview
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use {
+    'lewis6991/gitsigns.nvim', -- GitSigns
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
+  use {
+    'jinh0/eyeliner.nvim',
+    config = function()
+      require'eyeliner'.setup {
+        highlight_on_key = true, -- show highlights only after keypress
+        dim = true              -- dim all other characters if set to true (recommended!)
+      }
+    end
+  }
+
   -- Your plugins go here
 end)

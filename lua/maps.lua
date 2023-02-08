@@ -1,9 +1,11 @@
 local set = vim.keymap.set
-
 -- yank stuff
 set('n', 'x', '\"_x')
-set('n', '<leader>p', '\"+p')
-set('n', '<leader>P', '\"+P')
+set({"n", "v"}, '<leader>y', '\"+y')
+set({"n", "v"}, '<leader>p', '\"+p')
+set({"n", "v"}, '<leader>P', '\"+P')
+set('n', 'ypiw', 'viwp')
+set('n', '<leader>ypiw', 'viw\"+p')
 
 -- increment/decrement
 set('n', '+', '<C-a>')
@@ -14,7 +16,7 @@ set('n', '<C-a>', 'gg<S-v>G')
 
 -- Movement
 set('n', 'gl', '$')
-set('n', 'gh', '0')
+set('n', 'gh', '^')
 
 -- New Tab
 set('n', 'te', ':tabedit<CR>')
