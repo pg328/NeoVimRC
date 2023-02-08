@@ -12,8 +12,10 @@ local o = vim.opt
 
 o.title = true
 o.autoindent = true
-o.hlsearch = true
+o.hlsearch = false
+o.incsearch = true
 o.backup = false
+o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 o.showcmd = true
 o.cmdheight = 1
 o.laststatus = 2
@@ -34,6 +36,7 @@ o.backspace = 'start,eol,indent'
 o.path:append { '**' } -- recursive file search
 o.wildignore:append { '*/node_modules/*' } -- recursive file search
 o.formatoptions:append { 'r' }
+o.colorcolumn = "80"
 
 vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = '*',

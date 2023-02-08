@@ -61,6 +61,9 @@ packer.startup(function(use)
     requires = { { "nvim-tree/nvim-web-devicons" } }
   })
   use { 'numToStr/Comment.nvim', -- Commenter
+     config = function()
+        require('Comment').setup()
+    end,
     requires = {
       'JoosepAlviste/nvim-ts-context-commentstring'
     }
