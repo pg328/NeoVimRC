@@ -22,7 +22,16 @@ packer.startup(function(use)
   use 'hrsh7th/nvim-cmp' -- autocompletions
   use 'L3MON4D3/LuaSnip' -- snippets
   use 'mg979/vim-visual-multi' -- MultiCursor
-  use "kylechui/nvim-surround"
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
+
   use {
     'nvim-treesitter/nvim-treesitter', -- TreeSitter
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
@@ -37,13 +46,11 @@ packer.startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } , { "kdheepak/lazygit.nvim" } },
     config = function()
-        require("telescope").load_extension("lazygit") --LazyGit
+      require("telescope").load_extension("lazygit") --LazyGit
     end,
   }
   use 'nvim-telescope/telescope-file-browser.nvim' -- NetRW replacement
   use 'akinsho/bufferline.nvim' -- Bufferline
-
-
   use 'norcalli/nvim-colorizer.lua' -- Colorizer
   use({
     "glepnir/lspsaga.nvim", -- Diagnostic UI
@@ -60,8 +67,8 @@ packer.startup(function(use)
   }
 
   -- null-ls
-use('jose-elias-alvarez/null-ls.nvim')
-use('MunifTanjim/prettier.nvim')-- Prettier
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')-- Prettier
   -- vim-surround
   -- undotree
   -- Your plugins go here
