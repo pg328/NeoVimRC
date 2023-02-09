@@ -21,8 +21,7 @@ set('n', '<C-a>', 'gg<S-v>G')
 set('n', 'gl', '$')
 set('n', 'gh', '^')
 
--- New Tab
-set('n', 'te', ':new<CR>')
+set('i', 'jj', '<Esc>:w<CR>')
 set('n', 'tq', ':BufferClose<CR>')
 set('n', 'tn', ':BufferNext<CR>')
 set('n', 'tp', ':BufferPrevious<CR>')

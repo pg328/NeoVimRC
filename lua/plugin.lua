@@ -21,6 +21,24 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons' -- Nice Icons
   use 'nvim-lualine/lualine.nvim' -- LuaLine!
 
+  use { -- Save with jj without having to slow down when typing "jj"
+
+    "max397574/better-escape.nvim",
+    config = function()
+      require("better_escape").setup({
+        mapping = {"jj"}, -- a table with mappings to use
+        timeout = 200, -- the time in which the keys must be hit in ms. Use option timeoutlen by default
+        clear_empty_lines = false, -- clear line after escaping if there is only whitespace
+        keys = "<Esc>", -- keys used for escaping, if it is a function will use the result everytime
+        -- example(recommended)
+        -- keys = function()
+        --   return vim.api.nvim_win_get_cursor(0)[2] > 1 and '<esc>l' or '<esc>'
+        -- end,
+      }
+      )
+    end,
+  }
+
   use { -- Sessions
     'rmagatti/auto-session',
     config = function()
@@ -31,10 +49,25 @@ packer.startup(function(use)
     end
   }
 
-  use {
+  use { -- Relative Line Numbers
     'nkakouros-original/numbers.nvim',
     config = function()
       require('numbers').setup()
+    end
+  }
+
+  use {
+    'sunjon/shade.nvim',
+    config = function()
+      require('shade').setup({
+        overlay_opacity = 50,
+        opacity_step = 1,
+        keys = {
+          brightness_up    = '<C-Up>',
+          brightness_down  = '<C-Down>',
+          toggle           = '<Leader>s',
+        }
+      })
     end
   }
 
