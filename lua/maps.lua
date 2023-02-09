@@ -22,17 +22,17 @@ set('n', 'gl', '$')
 set('n', 'gh', '^')
 
 -- New Tab
-set('n', 'te', ':tabedit<CR>')
-set('n', 'tc', ':tabclose<CR>')
-set('n', 'tn', ':tabnext<CR>')
-set('n', 'tp', ':tabprevious<CR>')
+set('n', 'te', ':new<CR>')
+set('n', 'tq', ':BufferClose<CR>')
+set('n', 'tn', ':BufferNext<CR>')
+set('n', 'tp', ':BufferPrevious<CR>')
+set('n', 'td', ':BufferOrderByDirectory<CR>')
 
 -- Splits
 set('n', 'ss', ':vsplit<CR><C-w>w', { silent = true })
 set('n', 'sv', ':split<CR><C-w>w', { silent = true })
 
 -- Move Split
-set('n', '<leader><leader>', '<C-w>w')
 set('n', 'sh', '<C-w>h')
 set('n', 'sj', '<C-w>j')
 set('n', 'sk', '<C-w>k')

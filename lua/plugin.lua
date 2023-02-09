@@ -77,6 +77,7 @@ packer.startup(function(use)
   use 'hrsh7th/nvim-cmp' -- autocompletions
   use 'L3MON4D3/LuaSnip' -- snippets
   use 'mg979/vim-visual-multi' -- MultiCursor
+  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'} -- Bar for buffers
 
   use({
     "kylechui/nvim-surround",

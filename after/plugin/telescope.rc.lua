@@ -52,6 +52,4 @@ tscope.setup {
 
   set('n', '<leader>d', '<cmd>lua require("telescope.builtin").diagnostics()<CR>', opts)
 
-  set('n', '<leader><leader>', '<cmd>lua require("telescope.builtin").resume()<CR>', opts)
-
   set('n', '<C-s>', '<cmd>lua require("telescope").extensions.file_browser.file_browser({ path = "%:p:h", cwd = telescope_buffer_dir(), respect_git_ignore = false, hidden = true, grouped = true, previewer = false, initial_mode = "normal", layout_config = { height = 40 }})<CR>', opts)
