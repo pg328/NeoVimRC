@@ -6,6 +6,14 @@ end
 
 vim.cmd [[packadd packer.nvim]]
 
+-- Make sure you have Fira Code Nerd Font! You can download it here https://github.com/ryanoasis/nerd-fonts/releases
+
+-- brew install tree-sitter
+-- brew install luajit
+-- brew install git-delta
+-- brew install ripgrep
+-- brew install fsouza/prettierd/prettierd
+
 packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- Packer
   use 'lunarvim/colorschemes' -- VSCode Theme
@@ -20,7 +28,7 @@ packer.startup(function(use)
       }
     end
   }
-  use {
+  use { -- Language Installer
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
