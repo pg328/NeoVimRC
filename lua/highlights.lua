@@ -4,5 +4,5 @@ o.cursorline = true
 o.termguicolors = true
 o.winblend = 0
 o.wildoptions = 'pum'
-o.pumblend =  background
+-- o.pumblend = 0
 o.background = 'dark'

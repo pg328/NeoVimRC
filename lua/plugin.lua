@@ -11,6 +11,15 @@ packer.startup(function(use)
   use 'lunarvim/colorschemes' -- VSCode Theme
   use 'kyazdani42/nvim-web-devicons' -- Nice Icons
   use 'nvim-lualine/lualine.nvim' -- LuaLine!
+  use { -- Sessions
+    'rmagatti/auto-session',
+    config = function()
+      require("auto-session").setup {
+        log_level = "error",
+        auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+      }
+    end
+  }
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -71,7 +80,6 @@ packer.startup(function(use)
       'JoosepAlviste/nvim-ts-context-commentstring'
     }
   }
-
   use('jose-elias-alvarez/null-ls.nvim') -- Null-LS
   use('MunifTanjim/prettier.nvim')-- Prettier
   use('theprimeagen/harpoon') -- Harpoon
