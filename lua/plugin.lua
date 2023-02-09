@@ -17,6 +17,9 @@ packer.startup(function(use)
     "neovim/nvim-lspconfig",
   }
   use { 'onsails/lspkind.nvim' } -- vscode-like picograms apparently
+  use { -- Signature Hints as you type
+    "ray-x/lsp_signature.nvim",
+  }
   use 'hrsh7th/cmp-buffer' --
   use 'hrsh7th/cmp-nvim-lsp' -- source for cmp to use nvim's LSP
   use 'hrsh7th/nvim-cmp' -- autocompletions

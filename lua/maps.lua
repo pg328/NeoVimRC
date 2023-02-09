@@ -7,6 +7,9 @@ set({"n", "v"}, '<leader>P', '\"+P')
 set('n', 'ypiw', 'viwp')
 set('n', '<leader>ypiw', 'viw\"+p')
 
+-- Comment
+set("n", "<C-c>", "gcc")
+
 -- increment/decrement
 set('n', '+', '<C-a>')
 set('n', '-', '<C-x>')
