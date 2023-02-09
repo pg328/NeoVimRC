@@ -15,10 +15,12 @@ vim.cmd [[packadd packer.nvim]]
 -- brew install fsouza/prettierd/prettierd
 
 packer.startup(function(use)
+
   use 'wbthomason/packer.nvim' -- Packer
   use 'lunarvim/colorschemes' -- VSCode Theme
   use 'kyazdani42/nvim-web-devicons' -- Nice Icons
   use 'nvim-lualine/lualine.nvim' -- LuaLine!
+
   use { -- Sessions
     'rmagatti/auto-session',
     config = function()
@@ -28,6 +30,14 @@ packer.startup(function(use)
       }
     end
   }
+
+  use {
+    'nkakouros-original/numbers.nvim',
+    config = function()
+      require('numbers').setup()
+    end
+  }
+
   use {
     'declancm/cinnamon.nvim', -- Smooth Scrolling
     config = function() require('cinnamon').setup(
@@ -50,20 +60,24 @@ packer.startup(function(use)
       }
     ) end
   }
+
   use { -- Language Installer
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
+
   use { 'onsails/lspkind.nvim' } -- vscode-like picograms apparently
   use { -- Signature Hints as you type
     "ray-x/lsp_signature.nvim",
   }
+
   use 'hrsh7th/cmp-buffer' --
   use 'hrsh7th/cmp-nvim-lsp' -- source for cmp to use nvim's LSP
   use 'hrsh7th/nvim-cmp' -- autocompletions
   use 'L3MON4D3/LuaSnip' -- snippets
   use 'mg979/vim-visual-multi' -- MultiCursor
+
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -73,16 +87,20 @@ packer.startup(function(use)
       })
     end
   })
+
   use("LudoPinelli/comment-box.nvim") -- Pretty Comments
+
   use {
     'nvim-treesitter/nvim-treesitter', -- TreeSitter
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+
   use 'windwp/nvim-ts-autotag' -- Autotag
   use {
     "windwp/nvim-autopairs", -- Autopairs
     config = function() require("nvim-autopairs").setup {} end
   }
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     -- or                            , branch = '0.1.x',
@@ -91,9 +109,11 @@ packer.startup(function(use)
       require("telescope").load_extension("lazygit") --LazyGit
     end,
   }
+
   use 'nvim-telescope/telescope-file-browser.nvim' -- NetRW replacement
   use 'akinsho/bufferline.nvim' -- Bufferline
   use 'norcalli/nvim-colorizer.lua' -- Colorizer
+
   use({
     "glepnir/lspsaga.nvim", -- Diagnostic UI
     branch = "main",
@@ -102,6 +122,7 @@ packer.startup(function(use)
     end,
     requires = { { "nvim-tree/nvim-web-devicons" } }
   })
+
   use { 'numToStr/Comment.nvim', -- Commenter
     config = function()
       require('Comment').setup()
@@ -110,20 +131,26 @@ packer.startup(function(use)
       'JoosepAlviste/nvim-ts-context-commentstring'
     }
   }
+
   use('jose-elias-alvarez/null-ls.nvim') -- Null-LS
   use('MunifTanjim/prettier.nvim')-- Prettier
+
   use('theprimeagen/harpoon') -- Harpoon
+
   use('mbbill/undotree') -- UndoTree
+
   use({ -- Markdown Preview
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
+
   use {
     'lewis6991/gitsigns.nvim', -- GitSigns
     config = function()
       require('gitsigns').setup()
     end
   }
+
   use {
     'jinh0/eyeliner.nvim',
     config = function()
