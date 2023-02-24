@@ -15,17 +15,13 @@ set('n', '+', '<C-a>')
 set('n', '-', '<C-x>')
 
 -- Select All
-set('n', '<C-a>', 'gg<S-v>G')
+set('n', '<leader>a', 'gg<S-v>G')
 
 -- Movement
 set('n', 'gl', '$')
 set('n', 'gh', '^')
 
 set('i', 'jj', '<Esc>:w<CR>')
-set('n', 'tq', ':BufferClose<CR>')
-set('n', 'tn', ':BufferNext<CR>')
-set('n', 'tp', ':BufferPrevious<CR>')
-set('n', 'td', ':BufferOrderByDirectory<CR>')
 
 -- Splits
 set('n', 'ss', ':vsplit<CR><C-w>w', { silent = true })

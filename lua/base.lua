@@ -2,6 +2,8 @@ vim.cmd "colorscheme darkplus"
 
 vim.cmd('autocmd!')
 
+vim.notify = require('notify')
+
 vim.scriptencoding = 'utf-8'
 vim.encoding = 'utf-8'
 vim.fileencoding = 'utf-8'

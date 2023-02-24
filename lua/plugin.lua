@@ -96,6 +96,14 @@ packer.startup(function(use)
   use 'L3MON4D3/LuaSnip' -- snippets
   use 'mg979/vim-visual-multi' -- MultiCursor
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'} -- Bar for buffers
+  use 'rcarriga/nvim-notify' -- Nice Notifications
+
+--   use({
+--       'rcarriga/nvim-notify',
+--     config = function()
+-- require('notify').
+--       end
+--     })
 
   use({
     "kylechui/nvim-surround",
@@ -130,7 +138,7 @@ packer.startup(function(use)
   }
 
   use 'nvim-telescope/telescope-file-browser.nvim' -- NetRW replacement
-  use 'akinsho/bufferline.nvim' -- Bufferline
+  -- use 'akinsho/bufferline.nvim' -- Bufferline
   use 'norcalli/nvim-colorizer.lua' -- Colorizer
 
   use({
