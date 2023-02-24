@@ -57,21 +57,6 @@ packer.startup(function(use)
   }
 
   use {
-    'sunjon/shade.nvim',
-    config = function()
-      require('shade').setup({
-        overlay_opacity = 50,
-        opacity_step = 1,
-        keys = {
-          brightness_up    = '<C-Up>',
-          brightness_down  = '<C-Down>',
-          toggle           = '<Leader>s',
-        }
-      })
-    end
-  }
-
-  use {
     'declancm/cinnamon.nvim', -- Smooth Scrolling
     config = function() require('cinnamon').setup(
       {
@@ -152,10 +137,22 @@ packer.startup(function(use)
     "glepnir/lspsaga.nvim", -- Diagnostic UI
     branch = "main",
     config = function()
-      require("lspsaga").setup({})
+      require("lspsaga").setup({
+        ui = {
+          code_action = ""
+        }
+      })
     end,
     requires = { { "nvim-tree/nvim-web-devicons" } }
   })
+
+  use {
+    'kosayoda/nvim-lightbulb',
+    config = function()
+      require('nvim-lightbulb').setup({autocmd = {enabled = true}})
+    end,
+    requires = 'antoinemadec/FixCursorHold.nvim',
+  }
 
   use { 'numToStr/Comment.nvim', -- Commenter
     config = function()
