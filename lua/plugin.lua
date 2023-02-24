@@ -20,7 +20,6 @@ packer.startup(function(use)
   use 'lunarvim/colorschemes' -- VSCode Theme
   use 'kyazdani42/nvim-web-devicons' -- Nice Icons
   use 'nvim-lualine/lualine.nvim' -- LuaLine!
-
   use { -- Save with jj without having to slow down when typing "jj"
 
     "max397574/better-escape.nvim",
@@ -172,9 +171,8 @@ packer.startup(function(use)
   }
 
   use('jose-elias-alvarez/null-ls.nvim') -- Null-LS
+  use('jose-elias-alvarez/typescript.nvim') -- Better TypeScript
   use('MunifTanjim/prettier.nvim')-- Prettier
-
-  use('theprimeagen/harpoon') -- Harpoon
 
   use('mbbill/undotree') -- UndoTree
 

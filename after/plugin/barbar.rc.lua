@@ -83,7 +83,7 @@ require'bufferline'.setup {
   -- New buffer letters are assigned in this order. This order is
   -- optimal for the qwerty keyboard layout but might need adjustement
   -- for other layouts.
-  letters = 'asdfjkl;',
+  letters = 'qwertyuiopasdfghjklzxcvbnm',
 
   -- Sets the name of unnamed buffers. By default format is "[Buffer X]"
   -- where X is the buffer number. But only a static string is accepted here.
@@ -167,3 +167,8 @@ set('n', 'tp', '<cmd>BufferPrevious<CR>', {silent=true})
 set('n', '!tq', '<cmd>BufferClose!<CR>', {silent=true})
 set('n', 'tq', '<cmd>BufferClose<CR>', {silent=true})
 set('n', 'td', '<cmd>BufferOrderByDirectory<CR>', {silent=true})
+
+
+-- Override (not sure where this is being overridden)
+set('n', '<C-i>', '<C-i>')
+set('n', '<C-o>', '<C-o>')
