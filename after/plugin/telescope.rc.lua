@@ -3,6 +3,7 @@ if (not status) then return end
 
 local actions = require('telescope.actions')
 
+---@diagnostic disable-next-line: lowercase-global
 function telescope_buffer_dir()
   return vim.fn.expand('%:p:h')
 end
@@ -10,6 +11,11 @@ end
 local fb = require 'telescope'.extensions.file_browser.actions
 
 tscope.setup {
+  pickers = {
+    buffers = {
+      initial_mode = 'normal'
+    }
+  },
   defaults = {
     mappings = {
       n = {
@@ -42,7 +48,9 @@ tscope.setup {
   local opts = {noremap = true, silent = true}
   local set = vim.keymap.set
 
-  set('n', '<leader>f', '<cmd>lua require("telescope.builtin").find_files({no_ignore = false, hidden = true})<CR>', opts)
+  set('n', '<leader>f', '<cmd>lua require("telescope.builtin").find_files({no_ignore = true, hidden = false})<CR>', opts)
+
+  set('n', '<leader>F', '<cmd>lua require("telescope.builtin").find_files({no_ignore = false, hidden = true})<CR>', opts)
 
   set('n', '<leader>/', '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
 
@@ -52,4 +60,4 @@ tscope.setup {
 
   set('n', '<leader>d', '<cmd>lua require("telescope.builtin").diagnostics()<CR>', opts)
 
-  set('n', '<C-s>', '<cmd>lua require("telescope").extensions.file_browser.file_browser({ path = "%:p:h", cwd = telescope_buffer_dir(), respect_git_ignore = false, hidden = true, grouped = true, previewer = false, initial_mode = "normal", layout_config = { height = 40 }})<CR>', opts)
+  set('n', '<C-s>', '<cmd>lua require("telescope").extensions.file_browser.file_browser({ path = "%:p:h", cwd = telescope_buffer_dir(), respect_git_ignore = false, hide_parent_dir = true, git_status = false,  hidden = true, grouped = true, previewer = false, initial_mode = "normal", layout_config = { height = 40 }})<CR>', opts)
