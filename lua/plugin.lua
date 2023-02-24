@@ -48,6 +48,9 @@ packer.startup(function(use)
     end
   }
 
+  use "petertriho/nvim-scrollbar" -- VSCode-like scrollbar
+
+
   use { -- Relative Line Numbers
     'nkakouros-original/numbers.nvim',
     config = function()
@@ -59,8 +62,8 @@ packer.startup(function(use)
     'declancm/cinnamon.nvim', -- Smooth Scrolling
     config = function() require('cinnamon').setup(
       {
-        extra_keymaps = true,    -- Create extra keymaps.
-        extended_keymaps = true, -- Create extended keymaps.
+        extra_keymaps = false,    -- Create extra keymaps.
+        extended_keymaps = false, -- Create extended keymaps.
         override_keymaps = false, -- The plugin keymaps will override any existing keymaps.
 
         -- OPTIONS:
@@ -185,6 +188,7 @@ packer.startup(function(use)
     'lewis6991/gitsigns.nvim', -- GitSigns
     config = function()
       require('gitsigns').setup()
+      require("scrollbar.handlers.gitsigns").setup()
     end
   }
 
