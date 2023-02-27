@@ -13,6 +13,8 @@ ts.setup {
   },
   ensure_installed = {
     "lua",
+    "markdown",
+    "markdown_inline",
     "vim",
     "tsx",
     "toml",

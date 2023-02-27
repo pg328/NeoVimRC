@@ -48,7 +48,7 @@ tscope.setup {
   local opts = {noremap = true, silent = true}
   local set = vim.keymap.set
 
-  set('n', '<leader>f', '<cmd>lua require("telescope.builtin").find_files({no_ignore = true, hidden = false})<CR>', opts)
+  set('n', '<leader>f', '<cmd>lua require("telescope.builtin").find_files({no_ignore = true, hidden = false, respect_git_ignore = true, file_ignore_patterns = { "node%_modules/.*", ".*node%_modules" }})<CR>', opts)
 
   set('n', '<leader>F', '<cmd>lua require("telescope.builtin").find_files({no_ignore = false, hidden = true})<CR>', opts)
 
