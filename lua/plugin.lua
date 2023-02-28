@@ -20,6 +20,15 @@ packer.startup(function(use)
   use 'lunarvim/colorschemes' -- VSCode Theme
   use 'kyazdani42/nvim-web-devicons' -- Nice Icons
   use 'nvim-lualine/lualine.nvim' -- LuaLine!
+  use {
+    'jinh0/eyeliner.nvim',
+    config = function()
+      require'eyeliner'.setup {
+        highlight_on_key = true, -- show highlights only after keypress
+        dim = true              -- dim all other characters if set to true (recommended!)
+      }
+    end
+  }
   use { -- Save with jj without having to slow down when typing "jj"
 
     "max397574/better-escape.nvim",
@@ -192,15 +201,6 @@ packer.startup(function(use)
     end
   }
 
-  use {
-    'jinh0/eyeliner.nvim',
-    config = function()
-      require'eyeliner'.setup {
-        highlight_on_key = true, -- show highlights only after keypress
-        dim = true              -- dim all other characters if set to true (recommended!)
-      }
-    end
-  }
 
   -- Your plugins go here
 end)
