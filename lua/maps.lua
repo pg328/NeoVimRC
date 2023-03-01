@@ -20,6 +20,8 @@ set('n', '<leader>a', 'gg<S-v>G')
 -- Movement
 set('n', 'gl', '$')
 set('n', 'gh', '^')
+set('n', 'gk', 'gg')
+set('n', 'gj', 'G')
 
 set('i', 'jj', '<Esc>:w<CR>')
 

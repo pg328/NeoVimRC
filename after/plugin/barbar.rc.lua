@@ -160,8 +160,11 @@ require'bufferline'.setup {
 local set = vim.keymap.set
 
 set("n", "<leader>t", "<cmd>BufferPick<CR>", {silent = true})
+set('n', 'gn', '<cmd>BufferNext<CR>', {silent = true})
 set('n', 'tn', '<cmd>BufferNext<CR>', {silent = true})
+set('n', 'gp', '<cmd>BufferPrevious<CR>', {silent=true})
 set('n', 'tp', '<cmd>BufferPrevious<CR>', {silent=true})
 set('n', '!tq', '<cmd>BufferClose!<CR>', {silent=true})
 set('n', 'tq', '<cmd>BufferClose<CR>', {silent=true})
-set('n', 'td', '<cmd>BufferOrderByDirectory<CR>', {silent=true})
+set('n', '<leader>q', '<cmd>BufferPickDelete<CR>', {silent=true})
+set('n', 'to', '<cmd>BufferOrderByDirectory<CR>', {silent=true})

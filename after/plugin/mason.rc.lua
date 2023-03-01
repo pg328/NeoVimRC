@@ -7,7 +7,8 @@ mason.setup {
   ensure_installed = {
     'lua_ls',
     'marksman',
-    'tailwindcss'
+    'tailwindcss',
+    'astro'
   }
 }
 

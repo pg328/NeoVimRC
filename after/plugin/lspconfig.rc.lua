@@ -17,6 +17,8 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" }
 }
 
+nvim_lsp.astro.setup{}
+
 
 nvim_lsp.lua_ls.setup {
   settings = {
