@@ -17,7 +17,7 @@ require'bufferline'.setup {
   auto_hide = false,
 
   -- Enable/disable close button
-  closable = false,
+  -- closable = false, //DEPRECATED
 
   -- Enables/disable clickable tabs
   --  - left-click: go to buffer
@@ -25,13 +25,13 @@ require'bufferline'.setup {
   clickable = true,
 
   -- Enables / disables diagnostic symbols
-  diagnostics = {
-    [vim.diagnostic.severity.ERROR] = {enabled = true, icon = ICONS.ERROR},
-    [vim.diagnostic.severity.WARN] = {enabled = true, icon=ICONS.WARN},
-    [vim.diagnostic.severity.INFO] = {enabled = true, icon=ICONS.INFO},
-   [vim.diagnostic.severity.HINT] = {enabled = true, icon=ICONS.TRACE},
-  },
-
+  -- diagnostics = {
+  --   [vim.diagnostic.severity.ERROR] = {enabled = true, icon = ICONS.ERROR},
+  --   [vim.diagnostic.severity.WARN] = {enabled = true, icon=ICONS.WARN},
+  --   [vim.diagnostic.severity.INFO] = {enabled = true, icon=ICONS.INFO},
+  --  [vim.diagnostic.severity.HINT] = {enabled = true, icon=ICONS.TRACE},
+  -- },
+  -- //DEPRECATED
 
   -- Disable highlighting alternate buffers
   highlight_alternate = false,
@@ -45,7 +45,7 @@ require'bufferline'.setup {
   -- Enable/disable icons
   -- if set to 'numbers', will show buffer index in the tabline
   -- if set to 'both', will show buffer index and icons in the tabline
-  icons = true,
+  -- icons = true, DEPRECATED
 
   -- If set, the icon color will follow its corresponding buffer
   -- highlight group. By default, the Buffer*Icon group is linked to the
@@ -54,11 +54,11 @@ require'bufferline'.setup {
   icon_custom_colors = false,
 
   -- Configure icons on the bufferline.
-  icon_separator_active = '▎',
-  icon_separator_inactive = '▎',
-  icon_close_tab = '',
-  icon_close_tab_modified = '●',
-  icon_pinned = '車',
+  -- icon_separator_active = '▎',
+  -- icon_separator_inactive = '▎',
+  -- icon_close_tab = '',
+  -- icon_close_tab_modified = '●',
+  -- icon_pinned = '車',
 
   -- If true, new buffers will be inserted at the start/end of the list.
   -- Default is to insert after current buffer.
