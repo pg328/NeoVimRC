@@ -3,7 +3,7 @@
 Make sure you have Fira Code Nerd Font! You can download it here https://github.com/ryanoasis/nerd-fonts/releases
 
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-	    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+	    ~/.local/share/nvim/site/pack/packer/start/packer.nvim;
 
     brew install tree-sitter;
     brew install luajit;
